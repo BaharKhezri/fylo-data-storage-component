@@ -1,0 +1,180 @@
+body.bg{
+    background-image: url("images/bg-desktop.png");
+    background-size:100% 55%;
+    background-position:bottom center;
+    background-repeat: no-repeat;
+    background-color:#0c122c;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction: column;
+    font-family: "Raleway", sans-serif;
+}
+.card{
+    display: flex;
+    align-items:flex-end;
+    justify-content:center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.card-logo{
+    background-color:#1d2c67;
+    padding:40px;
+    border-radius:10px 70px 10px 10px;
+    width:200px;
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+    align-self:center;
+}
+.card-logo-img{
+    width: 50%;
+}
+.icons{
+    display:flex;
+    flex-direction:row;
+    gap: 10px;
+}
+.icon-img{
+    background-color:#0c122c;
+    padding:10px;
+    border-radius:10px;
+    width: 15px;
+    height: 15px;
+    object-fit: contain;
+}
+.card-storage{
+    background-color:#1d2c67;
+    padding:25px;
+    border-radius:10px 10px 10px 10px;
+    width:410px;
+    position: relative;
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+}
+.card-storage-text{
+    color:#dbd9e1;
+    font-size: 14px;
+}
+.progress-bar{
+    width: 100%;
+    height: 10px;
+    background-color:#0c122c;
+    border-radius: 10px;
+    padding: 2px;
+}
+.progress-fill{
+    width: 81.5%;
+    height: 100%;
+    background:linear-gradient(90deg, #ffa399, #ff4d97);
+    border-radius: 10px;
+    position: relative;
+}
+.progress-fill::after{
+    content:"";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color:white;
+    border-radius: 50%;
+    right: 5px;
+    top: 50%;
+    transform: translate(50%, -50%);
+}
+.storage-labels{
+    display:flex;
+    justify-content:space-between;
+    color:#dbd9e1;
+    font-size: 12px;
+    font-weight: 600;
+}
+.storage-tooltip{
+    position: absolute;
+    top: -45px;
+    right: 40px;
+    background-color:white;
+    padding: 12px 20px;
+    border-radius: 10px 10px 0 10px;
+    display: flex;
+    align-items:center;
+    gap: 8px;
+    z-index: 10;
+}
+.storage-tooltip::after{
+    content:"";
+    position: absolute;
+    right:0px;
+    bottom: -20px;
+    border-width: 20px 0 0 20px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+}
+.tooltip-number{
+    color:#0c122c;
+    font-weight: 600;
+    font-size: 30px;
+}
+.tooltip-text{
+    font-size: 12px;
+    color:#8a8c9e;
+    font-weight:bold;
+    letter-spacing: 1px;
+}
+.attribution{
+    color:#dbd9e1;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 50px;
+}
+.attribution a{
+    color:hsl(228, 45%, 44%);
+}
+@media (max-width:768px){
+    body.bg{
+        background-image: url("images/bg-mobile.png");
+        background-size:cover;
+        background-position:center;
+        margin: 0;
+        justify-content: center;
+        padding:40px;
+        overflow-x:hidden;
+        
+    }
+    .card{
+        flex-direction: column;
+        align-items:center;
+        gap: 20px;
+        width: 100%;
+    }
+    .card-logo{
+        width: 100%;
+        max-width: 100%;
+        box-sizing:border-box;
+        padding: 30px;
+    }
+    .card-storage{
+        width: 100%;
+        max-width: 100%;
+        box-sizing:border-box;
+        padding: 30px;
+        gap: 10px;
+    }
+    .storage-tooltip{
+        position:absolute;
+        top: 100px;
+        border-radius: 10px;
+        right: 50%;
+        transform: translateX(50%);
+       margin-top: 30px;
+       
+    }
+    .storage-tooltip::after{
+        content:none;
+    }
+    .attribution{
+        padding-top: 20px;
+    }
+}
